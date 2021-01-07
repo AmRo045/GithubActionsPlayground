@@ -5,16 +5,15 @@ on:
     branches:
     - master
 
-  jobs:
-    build:
-      runs-on: windows-latest
-
-      steps:
-      - uses: actions/checkout@master
-      - name: Setup .Net Core
-        uses: actions/setup-dotnet@master
-        with:
-          dotnet-version: '3.0.100-rc1–014190'
-        -name: Build library (.net core)
-          run: dotnet build CIProjectDemo/CIProjectDemo.csproj --configuration release
-          
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: '3.0.100-rc1-014190'
+    - name: Build library (.net core)
+      run: dotnet build CIProjectDemo/CIProjectDemo.csproj --configuration release
