@@ -14,6 +14,6 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@master
       with:
-        dotnet-version: '5.0.1'
+        dotnet-version: '3.1.301'
     - name: Build library (.net core)
       run: dotnet build CIProjectDemo/CIProjectDemo.csproj --configuration release
